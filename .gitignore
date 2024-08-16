@@ -1,0 +1,6 @@
+bin/
+.vscode/
+tmp/
+*.sh
+*.log
+*.img
