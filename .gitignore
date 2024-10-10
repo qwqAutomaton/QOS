@@ -4,3 +4,5 @@ tmp/
 *.sh
 *.log
 *.img
+Sample_OS/
+.DS_Store
