@@ -37,6 +37,7 @@ GDT_hi_DATA equ 00000000_1_1_0_0_1111_1_00_1_0010_00000000b
 ; 内核视频段描述符高 32 位。段基址中 8 位: 0x0b = 00001011b
 GDT_hi_VDEO equ 00000000_1_1_0_0_0000_1_00_1_0010_00001011b
 ;------- GDT constant -------;
+
 ;---- Selector  constant ----;
 SEL_RPL0 equ 00b  ; 请求特权级 0
 SEL_RPL1 equ 01b  ; 请求特权级 1
@@ -45,3 +46,20 @@ SEL_RPL3 equ 11b  ; 请求特权级 3
 SEL_TI_G equ 000b ; 表指示器：GDT
 SEL_TI_L equ 100b ; 表指示器：LDT
 ;---- Selector  constant ----;
+
+;------- Page constant ------;
+PDT_ADDR equ 0x100000 ; 页目录表地址
+
+PGE_P_OK equ 1b   ; 存在内存中
+PGE_RWOK equ 00b  ; 可读写
+PGE_RWNO equ 10b  ; 不可读写
+PGE_USER equ 100b ; 用户级
+PGE_SPVS equ 000b ; 特权级
+;------- Page constant ------;
+
+;------- Kernel ------;
+KER_SEC equ 20
+KER_SEC_CNT equ 32
+KER_ADDR equ 0x70000
+KER_ENTRY equ 0xc0001500
+;------- Kernel ------;
